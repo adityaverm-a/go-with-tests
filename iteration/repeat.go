@@ -1,6 +1,6 @@
 package iteration
 
-func Repeat(character string) (repeated string) {
+func Repeat(character string, repeat int) (repeated string) {
 	for i := 0; i < 5; i++ {
 		repeated += character
 	}
