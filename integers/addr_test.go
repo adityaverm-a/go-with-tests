@@ -5,7 +5,7 @@ import (
 	"testing"
 )
 
-// Run go test -v
+// Run, go test -v
 func ExampleAdd() {
 	sum := Add(6, 5)
 	fmt.Println(sum)
