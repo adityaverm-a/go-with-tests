@@ -2,30 +2,57 @@ package main
 
 import "fmt"
 
-const japanese = "Japanese"
-const french = "French"
+const englishSir = "Sir"
 const englishHelloPrefix = "Hello, "
+
+const french = "French"
+const frenchSir = "Monsieur"
 const frenchHelloPrefix = "Bonjour, "
+
+const japanese = "Japanese"
+const japaneseSir = "様"
 const japaneseHelloPrefix = "こんにちは、"
 
 // It is good to separate your "domain" code from the outside world (side-effects).
 //The fmt.Println is a side effect (printing to stdout) and the string we send in is our domain.
 func Hello(name string, language string) string {
 	if name == "" {
-		name = "Sir"
+		name = getName(language)
 	}
 
-	if language == japanese {
-		return japaneseHelloPrefix + name
+	return greetingPrefix(language) + name
+}
+
+func getName(language string) (name string) {
+	switch language {
+	case french:
+		name = frenchSir
+
+	case japanese:
+		name = japaneseSir
+
+	default:
+		name = englishSir
 	}
 
-	if language == french {
-		return frenchHelloPrefix + name
+	return
+}
+
+func greetingPrefix(language string) (prefix string) {
+	switch language {
+	case french:
+		prefix = frenchHelloPrefix
+
+	case japanese:
+		prefix = japaneseHelloPrefix
+
+	default:
+		prefix = englishHelloPrefix
 	}
 
-	return englishHelloPrefix + name
+	return
 }
 
 func main() {
-	fmt.Println(Hello("", french))
+	fmt.Println(Hello("", japanese))
 }
