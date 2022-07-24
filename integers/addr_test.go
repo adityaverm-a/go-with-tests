@@ -7,6 +7,6 @@ func TestAddr(t *testing.T) {
 	expected := 5
 
 	if sum != expected {
-		t.Errorf("expected %q but got %q", expected, sum)
+		t.Errorf("expected %d but got %d", expected, sum)
 	}
 }
