@@ -11,5 +11,5 @@ func Hello(name string) string {
 }
 
 func main() {
-	fmt.Println(Hello("Bruce"))
+	fmt.Println(Hello("Mr. Wayne"))
 }
