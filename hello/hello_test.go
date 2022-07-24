@@ -20,15 +20,24 @@ func TestHello(t *testing.T) {
 
 		assertCorrectMessage(t, got, want)
 	})
+
 	t.Run("Saying 'Hello, Sir' when an empty string is supplied", func(t *testing.T) {
 		got := Hello("", "")
 		want := "Hello, Sir"
 
 		assertCorrectMessage(t, got, want)
 	})
+
 	t.Run("in Japanese", func(t *testing.T) {
 		got := Hello("ウェインさん", "Japanese")
 		want := "こんにちは、ウェインさん"
+
+		assertCorrectMessage(t, got, want)
+	})
+
+	t.Run("in French", func(t *testing.T) {
+		got := Hello("M. Wayne", "French")
+		want := "Bonjour, M. Wayne"
 
 		assertCorrectMessage(t, got, want)
 	})
