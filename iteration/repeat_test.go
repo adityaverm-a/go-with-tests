@@ -1,6 +1,16 @@
 package iteration
 
-import "testing"
+import (
+	"fmt"
+	"testing"
+)
+
+// Run, go test -v
+func ExampleRepeat() {
+	repeated := Repeat("c", 3)
+	fmt.Println(repeated)
+	// Output: ccc
+}
 
 func TestRepeat(t *testing.T) {
 	assertCorrectMessage := func(t testing.TB, repeated, expected string) {
