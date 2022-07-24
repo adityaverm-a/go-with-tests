@@ -3,7 +3,9 @@ package main
 import "fmt"
 
 const japanese = "Japanese"
+const french = "French"
 const englishHelloPrefix = "Hello, "
+const frenchHelloPrefix = "Bonjour, "
 const japaneseHelloPrefix = "こんにちは、"
 
 // It is good to separate your "domain" code from the outside world (side-effects).
@@ -17,9 +19,13 @@ func Hello(name string, language string) string {
 		return japaneseHelloPrefix + name
 	}
 
+	if language == french {
+		return frenchHelloPrefix + name
+	}
+
 	return englishHelloPrefix + name
 }
 
 func main() {
-	fmt.Println(Hello("", "Japanese"))
+	fmt.Println(Hello("", french))
 }
