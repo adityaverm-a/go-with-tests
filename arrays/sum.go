@@ -16,3 +16,7 @@ func SumAll(numbersToSum ...[]int) (sums []int) {
 
 	return sums
 }
+
+func SumAllTails(numbersToSum ...[]int) (sums []int) {
+	return
+}
