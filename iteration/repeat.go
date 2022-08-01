@@ -7,3 +7,9 @@ func Repeat(character string, repeat int) (repeated string) {
 
 	return
 }
+
+// Quick Summary
+
+// - More TDD practice
+// - Learned for
+// - Learned how to write benchmarks

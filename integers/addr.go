@@ -4,3 +4,10 @@ package integers
 func Add(x, y int) int {
 	return x + y
 }
+
+// Quick Summary
+
+// - More practice of the TDD workflow
+// - Integers, addition
+// - Writing better documentation so users of our code can understand its usage quickly
+// - Examples of how to use our code, which are checked as part of our tests
