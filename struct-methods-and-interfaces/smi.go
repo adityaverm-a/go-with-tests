@@ -1,5 +1,5 @@
 package smi
 
-func Perimeter(width, hieght float64) float64 {
-	return 0
+func Perimeter(width, height float64) float64 {
+	return 2 * (width + height)
 }
