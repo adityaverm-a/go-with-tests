@@ -25,5 +25,5 @@ func (w *Wallet) Balance() Bitcoin {
 }
 
 func (w *Wallet) Withdraw(amount Bitcoin) {
-
+	w.balance -= amount
 }
