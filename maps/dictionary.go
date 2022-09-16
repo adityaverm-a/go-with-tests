@@ -60,3 +60,17 @@ func (d Dictionary) Update(word, definition string) error {
 func (d Dictionary) Delete(word string) {
 	delete(d, word)
 }
+
+// Quick Summary
+
+// Throughout the process I learned How to:
+
+// - Create maps
+// - Search for items in maps
+// - Add new items to maps
+// - Update items in maps
+// - Delete items from a map
+
+// Learned more about Errors:
+// - How to create errors that are constants
+// - Writing error wrappers
