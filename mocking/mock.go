@@ -45,7 +45,7 @@ func (s *SpyTime) Sleep(duration time.Duration) {
 }
 
 func (c *ConfigurableSleeper) Sleep() {
-
+	c.sleep(c.duration)
 }
 
 func Countdown(out io.Writer, sleeper Sleeper) {
